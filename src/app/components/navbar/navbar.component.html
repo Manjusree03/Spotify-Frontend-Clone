@@ -1,0 +1,20 @@
+<header>
+    <nav  class="spotify_navbar">
+       <div class="spotify_navbar_focus">
+       <ul class="spotify_navbar_auth">
+           <li><</li>
+           <li>></li>
+           <li *ngIf="isSearchFieldVisible">
+           <input class="search_playlist" type="search"  placeholder="What do you want to listen to ?"/>
+        </li>
+           </ul>
+       </div>
+       
+       <ul class="spotify_navbar_auth">
+        <li class="spotify_signup"  value="signup" (click)="onNaviagteToSignup()">Sign up</li>
+        <li class="spotify_navbar_auth_login" (click)="onNavigateToLogin()">Log in</li>
+       </ul>
+          
+    </nav>
+   </header>
+   

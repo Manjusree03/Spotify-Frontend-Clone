@@ -1,0 +1,299 @@
+.spotify_home-container_sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: black;
+    height: 100vh ;
+}
+
+.spotify_home-container_playlist-container{
+    background-color: #191919;
+    height: 100vh ;
+}
+
+.spotify_home-container_sidebar-items{
+    /* display: flex;
+    flex-direction: row;
+    justify-content: flex-start; */
+    width: 100%;
+    font-size: 16px;
+    color:  white;
+    margin: 10px;
+    padding-left: 18px;
+}
+
+.spotify_home-container_sidebar-items > a:hover{
+    cursor: pointer;
+    color: lightgreen;
+      
+}
+
+
+.spotify_home-container_playlist-container{
+   padding: 0px;
+   background-color: #1f1d1d;
+   height: 100vh;
+   overflow-y: auto;
+
+}
+
+
+.fas.icon {
+  margin-right: 10px; /* adjust the value as needed */
+}
+.vertical-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.vertical-menu a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  margin-right: 93px;
+}
+
+
+
+.playlist_card_collection{
+    display: flex;
+    gap: 8px;
+    max-width: 1280px;
+    height: 92vh;
+    padding-left:30px;
+    position: relative;
+    z-index: 0;
+  
+}
+
+.spotify_home-container_language-select {
+  font-size: 16px;
+  padding: 8px;
+  border: 1px solid #070707;
+  border-radius: 4px;
+  background-color: #1b1616;
+  color: #e2cfcf;
+  cursor: pointer;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.spotify_home-container_language-select:focus {
+  outline: none;
+  border-color: #0c0e0d;
+}
+.playlist_card_collection1{
+    display: flex;
+    gap: 20px;
+    max-width: 1280px;
+    overflow-y: auto;
+    height: 47vh;
+   position: relative;
+    padding-right: 38px;
+    margin-left: 3px;
+    z-index: 0;
+    padding-top: 40px;
+    max-height: 2000px;
+}
+
+
+#song_card_item{
+    min-width :160px;
+    width: 390px;
+    z-index: 0;
+    
+    
+}
+#song_card_item5{
+  min-width :185px;
+  padding-left:4px;
+  
+  
+}
+
+#song_card_item1{
+  min-width :160px;
+  width: 215px;
+  z-index: 0;
+}
+
+.mt-5 {
+    margin-top: 1rem!important;
+    padding-top: 500px;
+}
+
+.mt-5s{
+        margin-top: -28rem!important;
+}
+
+.mt-5e{
+  margin-top: 1rem!important;
+  padding-top: 65px;
+  
+}
+
+.hover {
+    text-decoration: none;
+    transition: text-decoration 0.3s ease-in-out;
+    z-index: 1;
+   position: relative;
+    padding-left: 22px;
+  }
+
+  
+.hover:hover {
+    text-decoration: underline;
+  }
+
+ 
+  .Company {
+    display: flex;
+    flex-wrap: wrap;
+   
+    margin-top: -28rem;
+    z-index: 1;
+  }
+  
+  .block {
+    display: flex;
+    flex-direction: column;
+    margin-right: 51px;
+    z-index: 1;
+    margin-left: 30px;
+    padding-top:9px;
+  }
+  .block1 {
+    display: flex;
+    flex-direction: column;
+    margin-right: 253px;
+    z-index: 1;
+  }
+  .block2 {
+    display: flex;
+    flex-direction: column;
+    margin-right: 253px;
+    z-index: 1;
+  }
+  
+  .block a {
+    margin-bottom: 10px;
+    color: rgb(243, 243, 248);
+    text-decoration: none;
+   z-index: 1;
+
+  }
+  
+  .block a:hover {
+    text-decoration: underline;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   color: aliceblue;
+  }
+  
+  .social-icons a {
+    display: block;
+    margin: 10px;
+    color: aliceblue;
+  
+  }
+  .flex{
+    display: flex;
+    justify-content: space-between;
+  }
+  .playlist_card_collection5{
+    display: flex;
+    gap: 17px;
+    max-width: 1280px;
+    overflow-y: auto;
+    
+    height: 48vh;
+    padding-bottom: 1800px;
+    /* padding-right: 40px; */
+    margin-left: 6px;
+    z-index: 0;
+   overflow: hidden;
+   flex-wrap: wrap;
+   padding-left: 20px;
+  
+}
+
+.main {
+  display: flex;
+  align-items: initial;
+  height:300px
+}
+
+.thumbnail-container {
+  margin-right: 20px;
+}
+
+.thumbnail-container img {
+  width: 240px;
+  height: 240px;
+}
+
+.info-container {
+  flex: 1;
+}
+
+.tit {
+
+  font-size: 90px;
+  font-weight: bolder;
+  color: white;
+
+}
+
+.desc {
+  padding-top: 20px;
+  font-size: 14px;
+  color: lightgray;
+}
+
+.song {
+  display: flex;
+}
+
+.svg-container {
+  display: flex;
+  align-items: center; /* Optional: Center the SVGs vertically */
+}
+
+.svg-container svg {
+  margin-right: 20px; /* Adjust the spacing between SVGs */
+}
+
+
+.head{
+  margin-top: 20px;
+  display: flex;
+  max-width: 1300px;
+  margin-bottom: -32px;
+
+}
+
+.d:hover{
+  fill:#11b124;
+}
+
+.ss:hover{
+  fill:#0a0606e2;
+}
+
+
+.Button-sc-y0gtbx-0:hover{
+      width: 100px;
+      height: 35px;
+}
+
+  
+  
+  
+
+ 
+ 

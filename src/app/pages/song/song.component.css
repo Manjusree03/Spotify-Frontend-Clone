@@ -1,0 +1,34 @@
+.h{
+    padding: 5px;
+    display: flex;
+    color:white;
+    flex-direction: row;
+    align-items: baseline;
+    margin-left: 50px;
+    margin-right: 80px;
+    border-radius: 5px;
+}
+.w{
+    color:#808080;
+}
+
+.w:hover{
+    color: white;
+    text-decoration: underline;
+}
+
+.h:hover{
+    background-color: #80808027;
+}
+
+.h svg {
+    display: none;
+}
+
+.h:hover h6 {
+    display: none;
+}
+
+.h:hover svg {
+    display: inline-block;
+}

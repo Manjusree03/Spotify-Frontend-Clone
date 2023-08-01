@@ -1,0 +1,380 @@
+<!-- --sidebar-- -->
+<div class="spotify_home-container row">
+ <div class="spotify_home-container_sidebar col-2">
+    <div class="spotify_home-container_sidebar-items">
+        <img 
+        width="150"
+        class="m-3 text-left" 
+        src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_White.png"  
+        alt="spotifylogo" />
+    </div>
+   
+    <div class="spotify_home-container_sidebar-items"
+     (click)="onNavigation('home')" >
+
+       <a><span class="fas fa-home icon"></span> Home</a>
+    </div>
+
+    <div class="spotify_home-container_sidebar-items"
+     (click)="onNavigation('search')">
+        <a><span class="fas fa-search icon"></span>Search</a>
+     </div>
+
+     <div class="spotify_home-container_sidebar-items"
+      (click)="onNavigation('library')">
+        <a><span class="fas fa-folder icon"></span>Your Library</a>
+     </div><br>
+
+     <div 
+     class="spotify_home-container_sidebar-items"
+      (click)="onNavigation('playlist')">
+        <a><span class="fas fa-plus icon"></span>Create Playlist</a>
+     </div>
+
+     <div class="spotify_home-container_sidebar-items" (click)="onNavigation('playlist')">
+      <svg role="img" height="16" width="16" aria-hidden="true" viewBox="0 0 24 24">
+        <path fill="#1ED760" d="M12,21.35L10.55,20C5.73,15.49 2,12.39 2,8.5C2,5.42 4.42,3 7.5,3C9.19,3 10.8,3.81 12,5.03C13.2,3.81 14.81,3 16.5,3C19.58,3 22,5.42 22,8.5C22,12.39 18.27,15.49 13.45,20L12,21.35Z"/>
+      </svg>
+      <a style="padding-left: 10px;">Liked Playlist</a>
+    </div><br><br>
+    <div class="vertical-menu" style="color:white ;font-weight:3;padding-right: 4px;" >
+      <a >Legal</a>
+      <a>Privacy Center</a>
+      <a >Privacy Policy</a>
+      <a >Cookies</a>
+      <a >About Ads</a>
+    </div><br>
+    <div class="spotify_home-container_sidebar-items">
+      <span class="icon">
+        <i class="fas fa-globe icon"></i>
+      </span>
+      <select class="spotify_home-container_language-select">
+        <option value="en">English</option>
+        <option value="zh">தமிழ்</option>
+        <option value="es">Español</option>
+        <option value="fr">Français</option>
+        <option value="de">Deutsch</option>
+        <option value="pt">Português</option>
+        <option value="jp">日本語</option>
+        <option value="ko">한국어</option>
+        <option value="zh">中文</option>
+      </select>
+    </div>
+</div>
+
+<!-- HOME PAGE -->
+<!-- --Focus-- -->
+    <div class="spotify_home-container_playlist-container col-10"  *ngIf=" ishome">
+        <app-navbar></app-navbar>
+        <div 
+        [style.paddingTop]="'48px'"
+        class="mt-5 container-fluid">
+       
+        
+            <h4 class="hover" [style.color]="'white'"  [style.padding]="'10px'" >Focus</h4>
+
+        <div class="playlist_card_collection">
+            <div id="song_card_item" *ngFor="let sc of songCards">
+       
+            <app-song-card 
+            [playlistThumbnail]="sc.thumbnail"
+             [title]="sc.title"
+              [description]="sc.description"
+              (click)="redirectToPage(sc.title,sc.description,sc.thumbnail)"
+              >
+
+            </app-song-card>
+        </div>
+      </div>
+    </div>
+
+    <!-- --Spotify playlist-- -->
+
+   <div
+    [style.padding]="'0px'" 
+    class="mt-5s container-fluid" >
+    <h4 class="hover" [style.color]="'white'"  [style.paddingLeft]="'30px'"  [style.padding-bottom]="'25px'"  [style.padding-top]="'17px'"  style="z-index: 1;">Spotify Playlist</h4>
+        <div class="playlist_card_collection">
+            <div id="song_card_item" *ngFor="let sc of songCards1"
+             >
+                
+             
+             <app-song-card
+                [playlistThumbnail]="sc.thumbnail"
+                 [title]="sc.title"
+                  [description]="sc.description"
+                  (click)="redirectToPage(sc.title,sc.description,sc.thumbnail)"
+                  >
+                </app-song-card>
+            </div>
+          </div>
+        </div>
+
+        <!-- <south-India> -->
+          <div
+    [style.padding]="'0px'" 
+    class="mt-5s container-fluid" >
+    <h4 class="hover" [style.color]="'white'"  [style.padding]="'30px'" [style.padding-top]="'30px'" >South India</h4>
+        <div class="playlist_card_collection">
+            <div id="song_card_item" *ngFor="let sc of songCards2"
+             >
+                
+             
+             <app-song-card
+                [playlistThumbnail]="sc.thumbnail"
+                 [title]="sc.title"
+                  [description]="sc.description"
+                  (click)="redirectToPage(sc.title,sc.description,sc.thumbnail)"
+                  >
+                </app-song-card>
+            </div>
+          </div>
+        </div>
+
+        
+<!-- Footer for home -->
+        <div class="Company">
+          <div class="block">
+            <a href="#">About</a>
+            <a href="#">Jobs</a>
+            <a href="#">For the Record</a>
+          </div>
+          <div class="block">
+            <a href="#">Communities</a>
+            <a href="#">For Artists</a>
+            <a href="#">Developers</a>
+            <a href="#">Advertising</a>
+            <a href="#">Investors</a>
+            <a href="#">Vendors</a>
+          </div>
+          <div class="block">
+            <a href="#">Useful links</a>
+            <a href="#">Support</a>
+            <a href="#">Free Mobile App</a>
+          </div>
+        </div>
+
+
+        <hr style="color:rgb(168, 160, 160)">
+
+        <div class="flex"><h6 style="padding:20px;color:white">©Manju_Sree's Spotify😁 </h6>
+
+        <div class="social-icons">
+          <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        </div>
+        </div>
+
+        </div>
+
+         <!-- SEARCH PAGE -->
+         <div class="spotify_home-container_playlist-container col-10"  *ngIf="isearch">
+        <app-navbar></app-navbar>
+          <div class="mt-5e container-fluid">
+              <h4 class="hover" [style.color]="'white'"  [style.padding]="'10px'">Browse All </h4>
+              <div class="playlist_card_collection5">
+                <div id="song_card_item1" *ngFor="let sa of browserAll">
+           
+                  <app-browse-card style="color: white ; padding-left:60px ; padding-top: 50px;"
+                
+                [bgColor1]="sa.bgColor"
+                 [color1]="sa.color"
+                  [title1]="sa.title"
+                  [image1]="sa.image"
+                  >  
+                </app-browse-card>
+              
+<br></div>
+
+                 
+          </div>
+       
+                
+                  
+<!-- Footer  for search page-->
+        <div class="Company">
+          <div class="block">
+            <a href="#">About</a>
+            <a href="#">Jobs</a>
+            <a href="#">For the Record</a>
+          </div>
+          <div class="block">
+            <a href="#">Communities</a>
+            <a href="#">For Artists</a>
+            <a href="#">Developers</a>
+            <a href="#">Advertising</a>
+            <a href="#">Investors</a>
+            <a href="#">Vendors</a>
+          </div>
+          <div class="block">
+            <a href="#">Useful links</a>
+            <a href="#">Support</a>
+            <a href="#">Free Mobile App</a>
+          </div>
+        </div>
+
+
+        <hr style="color:rgb(168, 160, 160)">
+
+        <div class="flex"><h6 style="padding:20px;color:white;padding-bottom:60px;">©Manju_Sree's Spotify😁 </h6>
+
+        <div class="social-icons" style="margin-bottom: 60px;">
+          <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        </div>
+        </div>
+
+        </div>
+        </div>
+
+
+        <!---Playing songs---->
+<!---header---->
+<div class="spotify_home-container_playlist-container col-10"  *ngIf="isPlay">
+  <app-navbar></app-navbar>
+
+  <div class="main" style="margin-top:80px ;margin-left:40px">
+      <div class="thumbnail-container">
+        <img [src]="playsongs.thumbnail" alt="Thumbnail">
+      </div>
+      <div class="info-container">
+          <div>
+          <h6 style="color:white">Playlist</h6>
+        <h2 class="tit">{{ playsongs.title }}</h2>
+        <p class="desc">{{ playsongs.description }}</p>
+      </div>
+        <div style="display: flex;">
+          
+        <img width="65px" height="20px" style="margin-bottom:4px" src="assets/spotifydark.png"/><h6 style="color:white"> • 7,320,987 likes • 305 songs</h6><h6 style="color:#808080">, about 18hr</h6>
+      </div></div>
+  </div>
+
+  <!---spotify play symbol, like symbol--->
+  <div class="song">
+    <div class="svg-container" >
+      <svg id="playButton" width="100" height="100" style="margin-left: 50px;" (click)="playSong()">
+        <svg width="150" height="150">
+          <circle cx="50" cy="50" r="46" fill="#1DB954" class="d"/>
+          <path d="M40 30 L40 70 L70 50 Z" fill="#000000" class="ss"/>
+        </svg>
+      </svg>
+      <audio id="audioPlayer">
+        <!-- Replace 'path/to/audio.mp3' with the actual path to your audio file -->
+        <source src="https://files.gospeljingle.com/uploads/music/2023/05/Louis-Tomlinson-DonT-Let-It-Break-Your-Heart-(Gospeljingle.com).mp3" type="audio/mpeg">
+      </audio>
+      
+        <svg role="img" height="32" width="32" aria-hidden="true" fill="#808080" viewBox="0 0 24 24" data-encore-id="icon" class="circle">
+            <path d="M5.21 1.57a6.757 6.757 0 0 1 6.708 1.545.124.124 0 0 0 .165 0 6.741 6.741 0 0 1 5.715-1.78l.004.001a6.802 6.802 0 0 1 5.571 5.376v.003a6.689 6.689 0 0 1-1.49 5.655l-7.954 9.48a2.518 2.518 0 0 1-3.857 0L2.12 12.37A6.683 6.683 0 0 1 .627 6.714 6.757 6.757 0 0 1 5.21 1.57zm3.12 1.803a4.757 4.757 0 0 0-5.74 3.725l-.001.002a4.684 4.684 0 0 0 1.049 3.969l.009.01 7.958 9.485a.518.518 0 0 0 .79 0l7.968-9.495a4.688 4.688 0 0 0 1.049-3.965 4.803 4.803 0 0 0-3.931-3.794 4.74 4.74 0 0 0-4.023 1.256l-.008.008a2.123 2.123 0 0 1-2.9 0l-.007-.007a4.757 4.757 0 0 0-2.214-1.194z"></path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                <circle cx="3" cy="10" r="2" fill="#808080" class="circle" style="margin-right:10px" />
+                <circle cx="10" cy="10" r="2" fill="#808080" class="circle" />
+                <circle cx="17" cy="10" r="2" fill="#808080" class="circle" />
+            </svg>
+        </svg>
+    </div>
+</div>
+<!--main content of play songs -->
+
+<div class="head">
+  <div>
+      <h6 style="color:#808080; margin-left: 80px;font-size: 15px;" >#</h6>
+  </div>
+  <div>
+      <h6 style="color:#808080;margin-left: 20px;font-size: 15px;">Title</h6>
+  </div>
+  <div>
+      <h6 style="color:#808080;margin-left: 400px;font-size: 15px;">Album</h6>
+  </div>
+  <div>
+      <h6 style="color:#808080;margin-left: 320px;font-size: 15px;">Date added</h6>
+  </div>
+  <div style="margin-left: 120px;padding-bottom: 10px;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="10" stroke="currentColor" fill="#808080" stroke-width="2"/>
+          <line x1="12" y1="12" x2="12" y2="6" stroke="currentColor" stroke-width="2"/>
+          <line x1="12" y1="12" x2="15" y2="12" stroke="currentColor" stroke-width="2"/>
+        </svg>
+        
+  </div>
+</div>
+
+<hr class="footer__divider" style="margin-left: 60px;margin-right: 90px;margin-bottom: 26px;">
+
+
+            
+                <div class="playlist_card_collections100">
+                    <div id="song_card_item5" *ngFor="let ss of play">
+                        <app-song 
+                        [number]="ss.num"
+                        [image]="ss.i"
+                        [title]="ss.ti" 
+                        [section]="ss.s"
+                        [album]="ss.al"
+                        [date]="ss.d"
+                        [time]="ss.t"
+                        [audioSource]="ss.g"
+                        >
+                        </app-song>
+                    </div>
+            
+            
+        
+         </div>
+         <br>
+      <footer> 
+
+         <div class="Company">
+          <div class="block">
+            <a href="#">About</a>
+            <a href="#">Jobs</a>
+            <a href="#">For the Record</a>
+          </div>
+          <div class="block">
+            <a href="#">Communities</a>
+            <a href="#">For Artists</a>
+            <a href="#">Developers</a>
+            <a href="#">Advertising</a>
+            <a href="#">Investors</a>
+            <a href="#">Vendors</a>
+          </div>
+          <div class="block">
+            <a href="#">Useful links</a>
+            <a href="#">Support</a>
+            <a href="#">Free Mobile App</a>
+          </div>
+        </div>
+
+
+        <hr style="color:rgb(168, 160, 160)">
+
+        <div class="flex"><h6 style="padding:20px;color:white">©Manju_Sree's Spotify😁 </h6>
+
+        <div class="social-icons">
+          <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        </div>
+        </div>
+      </footer>
+        </div>
+
+
+    
+
+
+           
+
+
+
+         
+        
+
+
+
+       
+   
+

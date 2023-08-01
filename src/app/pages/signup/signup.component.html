@@ -1,0 +1,45 @@
+<div class="container">
+    <form [formGroup]="userForm" (ngSubmit)="onsubmit()">
+    <div class="signup_container">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUeIuCbVpLag1QY-Vm6vRZkW2aTGbvfcyyJw&usqp=CAU" width="250"/>
+<hr/>
+ 
+     <div>
+            <label ><strong> Email address or Phonenumber </strong></label><br/>
+            <input  [formControl]="usernameFormControl" type="text" placeholder="Email address or Phonenumber  "/>
+        </div>
+        <div>
+            <label ><strong> User Name  </strong></label><br/>
+            <input  [formControl]="usernameFormControl"  type="text" placeholder="User name "/>
+        </div>
+        <div>
+            <label ><strong> Create Password</strong></label><br>
+            <input [formControl]="passwordFormControl" type="password" placeholder=" Create Password"/><br/>
+        </div>
+        <div>
+            <label ><strong> Conform  Password</strong></label><br>
+            <input [formControl]="passwordFormControl" type="password" placeholder=" Create Password"/><br/>
+        </div>
+        
+    <div class="action_btn">
+        <span 
+        [style.display]="'flex'" 
+        [style.justifyContent]="'flex-start'"
+         [style.alignItems]="'strech'"
+         [style.gap]="'5px'"
+         >
+            <input type="checkbox" id="remember_me"/>
+        <label for="remember_me">
+            <span><strong>Remember me</strong> </span>
+        </label>
+    </span>
+        <button class="signup_btn">SIGN UP</button>
+      
+    </div> 
+    <hr [style.width]="'30%'"/>  
+    <strong><h5>Already have an account?</h5></strong>
+    <button class="loginup_btn" [style.width]="'30%'" >Log In For Spotify </button>
+    </div>
+</form>
+</div>
+
